@@ -34,36 +34,40 @@
         <div class="left-inner">
           <div class="left-heading">
             <h3>Mortgage Calculator</h3>
-            <span>Clear All</span>
+            <a id="clear">Clear All</a>
           </div>
 
           <!-- form -->
-          <form action="">
+          <form id="form" action="">
             <div class="form-group">
               <p>Mortgage Amount</p>
               <div class="form-inner">
                 <span>
-                  <img src="./assets/images/icons8-british-pound-24.png" alt="">
+                  <!-- <img src="./assets/images/icons8-british-pound-24.png" alt=""> -->
+                   $
                 </span>
-                <input type="text" />
-              </div>
+                <input id="mortgage-amt"  type="text" />
+              </div> 
+              <small id="error"></small>
             </div>
 
             <div class="form-group2">
               <div class="form-group two">
                 <p>Mortgage Term</p>
                 <div class="form-inner two first">
-                  <input type="text" />
+                  <input id="mortgage-term" type="text" />
                   <span>Years</span>
                 </div>
+                <small id="error"></small>
               </div>
 
               <div class="form-group two">
                 <p>Interest Rate</p>
                 <div class="form-inner two second">
-                  <input type="text" />
+                  <input id="interest-rate" type="text" />
                   <span>%</span>
                 </div>
+                <small id="error"></small>
               </div>
             </div>
 
@@ -72,20 +76,21 @@
               <div class="form-group radio">
                 <div class="form-radio">
                   <div class="dd">
-                    <input type="radio" name="blard" id="" />
+                    <input type="radio" name="blard" id="repayment" />
                   <label for="">Repayment</label>
                   </div>
                 </div>
                 <div class="form-radio">
                   <div class="dd">
-                    <input type="radio" name="blard" id="" />
+                    <input type="radio" name="blard" id="interest-only" />
                   <label for="">Interest Only</label>
                   </div>
                 </div>
+                <small id="error"></small>
               </div>
             </div>
 
-            <button>
+            <button id="calculate">
               <img src="./assets/images/icon-calculator.svg" alt="" />
               Calculate Repayments
             </button>
@@ -132,5 +137,8 @@
         </div>
       </div>
     </main>
+
+    <!-- JS link -->
+     <script src="./script.js"></script>
   </body>
 </html>

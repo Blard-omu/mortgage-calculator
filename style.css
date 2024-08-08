@@ -2,6 +2,7 @@
 
 :root {
   --Lime: hsl(61, 70%, 52%);
+  --Lime2: #d7da2fa6;
   --Red: hsl(4, 69%, 50%);
   --White: hsl(0, 0%, 100%);
   --Slate-100: hsl(202, 86%, 94%);
@@ -32,7 +33,7 @@ body {
   }
 main{
     width: 70%;
-    height: 560px;
+    height: 580px;
     margin:  0 auto;
     background-color: white;
     border-radius: 15px;
@@ -56,8 +57,9 @@ main{
     align-items: center;
 }
 
-.left-heading span{
+.left-heading a{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .right{
@@ -77,7 +79,6 @@ main{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    display: none;
 }
 .right-content, .right-result-container{
     padding: 0 5%;
@@ -93,8 +94,7 @@ main{
 /* right-result */
 .right-result-container{
     padding-bottom: 10%;
-    /* display: none; */
-
+    display: none;
 }
 .right-result-container h1{
     color: var(--Lime);
@@ -123,6 +123,16 @@ form{
     display: flex;
     width: 100%;
     border: 1px solid var(--Slate-300);
+}
+input[type="text"]:hover{
+    cursor: pointer !important;
+}
+.form-inner:hover{
+    border: 1px solid var(--Slate-800);
+}
+.form-radio:hover{
+    border: 1px solid var(--Lime);
+    cursor: pointer !important;
 }
 .form-inner input{
     width: 90%;
@@ -176,10 +186,10 @@ form{
     padding: 10px 0;
     margin-top: 1rem;
 }
-.form-radio:hover{
+/* .radio{
     background-color: #d6bc2b3c;
     outline: 1px solid var(--Slate-900); 
-}
+} */
 input[type="checkbox"], input[type="radio"]{
     /* appearance: none; */
     accent-color: var(--Lime);
@@ -201,8 +211,32 @@ button{
     border: none;
     margin: 1rem 0;
 }
+button:hover{
+    background-color: var(--Lime2);
+    cursor: pointer;
+}
+/* special css class */
+.form-inner.error{
+    border: 1px solid var(--Red) !important;
+}
+.form-inner.error span{
+    background-color: var(--Red);
+    color: white;
+}
 
-
+.form-inner small{
+    visibility: hidden;
+}
+.form-inner.error small{
+    visibility: visible;
+}
+small{
+    color: var(--Red);
+}
+.checked{
+    background-color: #f3d32052 !important;
+    border: 1px solid var(--Lime) !important;
+}
 
 /* Mobile */
 @media (max-width: 900px) {
